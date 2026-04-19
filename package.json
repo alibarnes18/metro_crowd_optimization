@@ -1,0 +1,15 @@
+{
+  "name": "metro-crowd-optimization-root",
+  "version": "1.0.0",
+  "description": "Root orchestrator for Metro Crowd Optimization System",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
